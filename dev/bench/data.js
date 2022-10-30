@@ -1,6 +1,6 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1623569296530,
-  "repoUrl": "https://github.com/PyO3/pyo3",
+  "lastUpdate": 1667114210606,
+  "repoUrl": "https://github.com/hboshnak/pyo3",
   "entries": {
     "pyo3-bench": [
       {
@@ -3515,6 +3515,180 @@ window.BENCHMARK_DATA = {
             "name": "tuple_get_item",
             "value": 544057,
             "range": "± 359",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "adamreichold@users.noreply.github.com",
+            "name": "Adam Reichold",
+            "username": "adamreichold"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "d7b05cbcf5785019a097e496454b924f3e11d94f",
+          "message": "Run Rust tests using Valgrind and cargo-careful (#2706)\n\n* Run asan with `-Zbuild-std`\r\n\r\n* Run Rust tests using Valgrind and cargo-careful.\r\n\r\n* Pin Valgrind task to 1.61.0 to avoid the DWARF5 issues until fixed upstream.\r\n\r\n* Override output checking of compilation UI tests as using different Rust versions might break that.\r\n\r\nCo-authored-by: messense <messense@icloud.com>",
+          "timestamp": "2022-10-28T21:04:11+01:00",
+          "tree_id": "eb4c9f375693dd02cc291a9669cb2579ba6c1bd0",
+          "url": "https://github.com/hboshnak/pyo3/commit/d7b05cbcf5785019a097e496454b924f3e11d94f"
+        },
+        "date": 1667114193239,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "call_0",
+            "value": 72351,
+            "range": "± 1573",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "call_method_0",
+            "value": 316228,
+            "range": "± 30983",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "iter_dict",
+            "value": 2839029,
+            "range": "± 20533",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "dict_new",
+            "value": 4455180,
+            "range": "± 111734",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "dict_get_item",
+            "value": 2629927,
+            "range": "± 10918",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "extract_hashmap",
+            "value": 8915020,
+            "range": "± 294132",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "extract_btreemap",
+            "value": 13368156,
+            "range": "± 114376",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "extract_hashbrown_map",
+            "value": 7404139,
+            "range": "± 278621",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "clean_gilpool_new",
+            "value": 16,
+            "range": "± 0",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "clean_acquire_gil",
+            "value": 111,
+            "range": "± 0",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "dirty_acquire_gil",
+            "value": 117,
+            "range": "± 0",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "iter_list",
+            "value": 1957904,
+            "range": "± 19479",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "list_new",
+            "value": 1398711,
+            "range": "± 65391",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "list_get_item",
+            "value": 1125159,
+            "range": "± 33988",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "list_get_item_unchecked",
+            "value": 1021795,
+            "range": "± 27866",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "first_time_init",
+            "value": 4640,
+            "range": "± 18144",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "drop_many_objects",
+            "value": 6402,
+            "range": "± 22",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "iter_set",
+            "value": 2333228,
+            "range": "± 19196",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "extract_hashset",
+            "value": 9676746,
+            "range": "± 46513",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "extract_btreeset",
+            "value": 3768219,
+            "range": "± 18138",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "extract_hashbrown_set",
+            "value": 6682677,
+            "range": "± 51060",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "iter_tuple",
+            "value": 1548586,
+            "range": "± 6960",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "tuple_new",
+            "value": 1424226,
+            "range": "± 44837",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "tuple_get_item",
+            "value": 829157,
+            "range": "± 3280",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "tuple_get_item_unchecked",
+            "value": 792000,
+            "range": "± 9946",
             "unit": "ns/iter"
           }
         ]
